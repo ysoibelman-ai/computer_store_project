@@ -44,15 +44,15 @@ def update_product(products):
     menu_selection = input("Enter menu selection: ")
     match menu_selection:
         case "1":
-            new_name = get_str("enter new name: ","str")
+            new_name = get_str("Enter new name: ")
             product["name"] = new_name
             return
         case "2":
-            new_category = get_str("enter new category: ", "str")
+            new_category = get_str("Enter new category: ")
             product["category"] = new_category
             return
         case "3":
-            new_price = get_num("enter new price: ")
+            new_price = get_num("Enter new price: ")
             product["price"] = new_price
             return
         case "4":
@@ -96,7 +96,7 @@ def search_product_in_inventory(products,search_type):
     if search_type == "name":
         name = get_str("Enter name: ")
         for product in products:
-            if product[search_type] == name:
+            if name.lower() in product[search_type].lower():
                 return product
     else:
         category = get_str("enter category: ")
