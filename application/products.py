@@ -1,4 +1,6 @@
 from application.helper_functions import get_str,get_num
+from application.menus import show_product_menu,search_product_menu,update_product_menu
+
 def product_manager(products:list):
     while True:
         show_product_menu()
@@ -18,7 +20,6 @@ def product_manager(products:list):
                  return
             case _:
                 print ("Invalid menu selction. Try again: ")
-
 
 def delete_product(products):
     product_id = get_num("Enter product id: ")
@@ -59,15 +60,6 @@ def update_product(products):
             product["status"] = not product["status"]
             return
 
-def update_product_menu():
-    print ("""
---- UPDATE PRODUCT ---
-1. name
-2. category
-3. price
-4. status
-""")
-
 def search_product(products):
     search_product_menu()
     while True:
@@ -106,15 +98,6 @@ def search_product_in_inventory(products,search_type):
                 searched_products.append(product)
         return searched_products
 
-
-def search_product_menu():
-    print ("""
---- SEARCH PRODUCT BY ---
-1. id
-2. name
-3. category
-""")
-    
 def display_all_products(products):
     if not products:
         print ("No products")
@@ -134,15 +117,3 @@ def get_product_details():
     price = get_num("Enter price: ")
     starting_stock = get_num("Enter starting stock: ")
     return product_name,category,price,starting_stock
-
-def show_product_menu():
-    print ("""
---------- PRODUCTS MANAGEMENT ---------
-
-1. Add Product
-2. Display All Products
-3. Search Product
-4. Update Product
-5. Delete Product
-6. Back to Main Menu
-""")

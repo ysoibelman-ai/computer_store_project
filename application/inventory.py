@@ -1,5 +1,6 @@
 
 from application.helper_functions import get_str,get_num
+from application.menus import inventory_menu
 def inventory_manager(products):
     inventory = create_inventory(products)
     while True:
@@ -27,7 +28,7 @@ def show_low_stock(inventory:dict):
     for key, value in inventory.items():
         if  0 < value < 5:
             print (key)
-            
+
 def show_out_of_stock(inventory:dict):
     for key,value in inventory.items():
         if value == 0:
@@ -73,19 +74,3 @@ def show_full_inventory(inventory:list):
         
 def create_inventory(products:list):
     return {product["name"].lower().strip(): product["stock"] for product in products}
-  
-def inventory_menu():
-    print("""
-------------------------
-    INVENTORY MENU
-------------------------
-Choose Option:
-
-1. Show full Inventory
-2. Search product in inventory
-3. Add units to inventory
-4. Remove units from inventory
-5. Show products that are out of stock
-6. Show low stock prodcuts
-7. Return to main menu
-""")
