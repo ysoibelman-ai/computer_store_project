@@ -14,7 +14,7 @@ def main():
         "name": "Mechanical Keyboard",
         "category": "Accessories",
         "price": 350.0,
-        "stock": 10,
+        "stock": 0,
         "active": True
     }
 ]
