@@ -1,9 +1,9 @@
 from application.helper_functions import get_str,get_num
-from application.menus import show_product_menu,search_product_menu,update_product_menu
+from application.menus import product_menu,search_product_menu,update_product_menu
 
 def product_manager(products:list):
     while True:
-        show_product_menu()
+        product_menu()
         menu_selection = get_str()
         match menu_selection:
             case "1":

@@ -7,7 +7,7 @@ def get_str(msg=""):
         else:
             print ("string musy not be empty")
         
-def get_num (msg,):
+def get_num (msg=None):
     while True:
         num = input(msg)
         if valid_num(num):

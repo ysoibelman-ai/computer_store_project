@@ -15,7 +15,7 @@ Choose an option:
 
 # Product
 
-def show_product_menu():
+def product_menu():
     print ("""
 --------- PRODUCTS MANAGEMENT ---------
 
@@ -58,5 +58,33 @@ Choose Option:
 4. Remove units from inventory
 5. Show products that are out of stock
 6. Show low stock prodcuts
+7. Return to main menu
+""")
+
+# Sales
+def sales_menu():
+    print("""
+=====================
+      SALES MENU
+=====================
+Choose Option:
+
+1. Open Sale
+2. Return to main menu
+""")
+    
+def open_sale_menu():
+    print ("""
+=======================
+     OPEN SALE MENU
+=======================
+Choose Option:
+
+1. Add item to cart
+2. Update item quantity
+3. Remove item from cart
+4. Calculate total
+5. Discount
+6. Complete sale
 7. Return to main menu
 """)
