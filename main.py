@@ -1,6 +1,7 @@
 from application.products import product_manager
 from application.inventory import inventory_manager
 from application.sales import sales_manager
+from application.menus import main_menu
 def main():
     products = [
     {
@@ -19,8 +20,9 @@ def main():
         "active": True
     }
 ]
-    #product_manager([])
-    #inventory_manager(products)
+    main_menu()
+    product_manager(products)
+    inventory_manager(products)
     sales_manager(products)
 
 if __name__ == "__main__":
